@@ -35,17 +35,24 @@ Ele irá tratar a camada de persistência dos dados e também será responsável
 
 ##Exemplo de primeira interface:
 
+```Java
 public interface PetRepository {
 
     List<PetType> findAllPets() throws DataAccessException;
 }
 
+```
+
 
 ##Exemplo de segunda interface:
+
+```Java
 
 public interface SpringDataPetRepository extends PetRepository, Repository<Pet, Integer> {
 
 }
+
+```
 
 
 #Serviço
@@ -54,6 +61,8 @@ O serviço terá a responsabilidade de conversar com o repositório.
 
 ##Exemplo de interface:
 
+```Java
+
 public interface ClinicService {
 
 Collection<Pet> findAllPets() throws DataAccessException;
@@ -61,11 +70,14 @@ Collection<Pet> findAllPets() throws DataAccessException;
 
 }
 
+```
+
 
 ##Exemplo de implementação dos métodos da interface:
 
-@Service
+```Java
 
+@Service
 public class ClinicServiceImpl implements ClinicService {
 
     private PetRepository petRepository;
@@ -94,6 +106,7 @@ public class ClinicServiceImpl implements ClinicService {
 	}
 }
 
+```
 
 #Controller(Controlador)
 
@@ -112,6 +125,8 @@ Body e Param são bem visíveis ao utilizar o Postman.
 
 ##Exemplo de controlador
 
+```Java
+
 @RestController
 @RequestMapping("api/pets")
 public class PetRestController {
@@ -126,5 +141,7 @@ public class PetRestController {
 		return new ResponseEntity<Pet>(pet, HttpStatus.OK);
 	}
 }
+
+```
 
 
