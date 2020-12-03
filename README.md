@@ -117,7 +117,7 @@ O método do controlador pode receber na requisição:
 
 @RequestBody= Corpo da requisição enviado no formado JSON durante a requisição 
 
-@RequestParam = São os parâmetros da requisição que chegarão no controlador através da url: "/exemplo/A=10&B=30". 
+@RequestParam = São os parâmetros da requisição que chegarão no controlador através da url: "/exemplo?A=10&B=30". 
 
 @PathVariable = é o parametro que nos diz o elemento a ser substituído por uma variavel na url, por exemplo: "users/{id}", esse {id} é enviado através de uma pathvariable, que é enviada na url da requisição, "users/1", esse 1 durante a requisição , chegará no méotodo do controlador que terá a rota users/{id}". 
 
