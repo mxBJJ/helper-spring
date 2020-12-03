@@ -55,7 +55,7 @@ public interface SpringDataPetRepository extends PetRepository, Repository<Pet, 
 ```
 
 
-# Serviço
+# Service (Serviço)
 
 O serviço terá a responsabilidade de conversar com o repositório.
 
