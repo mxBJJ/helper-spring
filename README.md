@@ -3,7 +3,7 @@
 Uma boa maneira de começar um novo endpoint(ex: "/novo"), é criando a classe que irá ser responsável pelo modelo a ser retornado por ele.
 
 ##Exemplo de model:
-
+```Java
 @Entity
 @Table(name = "tb_categories")
 public class Category implements Serializable {
@@ -23,6 +23,8 @@ public class Category implements Serializable {
         this.id = id;
         this.name = name;
     }
+    
+   ```
 
 Criando esta estrutura por exemplo, possuímos uma model de Categorias. O implements Serializable irá permitir que a classe seja serializada como JSON. O restante de código, é gerado pelos métodos getters e setters. A relação muitos para muitos não é utilizada no construtor, porque para criarmos uma categoria nova (instância do objeto), não precisamos declarar seus produtos de imediato.
 
